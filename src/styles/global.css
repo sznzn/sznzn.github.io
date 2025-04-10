@@ -42,6 +42,7 @@ header {
     max-width: 1400px;
     margin: 0 auto;
     font-size: 1.2rem;
+    
 }
 
 .nav-menu ul {
@@ -60,7 +61,7 @@ header {
     text-decoration: none;
     position: relative;
     padding: 5px 10px;
-    font-weight: 600;
+    font-weight: 400;
     transition: color 0.3s ease;
 }
 
@@ -203,7 +204,9 @@ header {
 .profile-text h1 {
     font-size: 2.8rem;
     /* color: white; */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);  
+    color: #333;
+    
     margin-bottom: 1rem;
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 import Profile from './Profile';
-import './style.css';
+
 
 const Header = () => {
     return  (
