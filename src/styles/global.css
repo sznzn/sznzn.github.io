@@ -1,0 +1,991 @@
+:root {
+    --pink: #FFB6C1;
+    --mint: #7EDAB9;
+    --lavender: #E6E6FA;
+    --yellow: #FFFACD;
+    --blue: #87CEEB;
+    --backColor: #FFF5F5;
+
+
+    /* 文字颜色 */
+    /* --text-dark: #4A5568;    深灰蓝色 - 主要文字 */
+    --text-dark: #4A2B5F;    /* 深灰蓝色 - 主要文字 */
+    --text-medium: #718096;  /* 中灰蓝色 - 次要文字 */
+    --text-light: #A0AEC0;   /* 浅灰蓝色 - 辅助文字 */
+
+    --primary-font: 'Quicksand', sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--backColor);
+    color: var(--text-dark)
+}
+
+/********************************* header部分开始 *********************************/
+header {
+    text-align: center;
+    padding: 2rem;
+    /* background-color: #F8BBD0; 柔和粉色 */
+    border-bottom: 5px solid #F8BBD0; /* 淡紫色分割线 */
+}
+/********************************* 导航菜单开始 *********************************/
+.nav-menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 菜单链接基本样式 */
+.nav-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* 悬停时的文字颜色 - 保持白色但可以稍微调整透明度制造效果 */
+.nav-menu ul li a:hover {
+    color: rgba(255, 255, 255, 0.8);  /* 白色但带一点透明效果 */
+}
+
+.nav-menu ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--pink), var(--lavender));
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-menu ul li a:hover::before {
+    width: 100%;
+}
+
+
+
+/* 果冻弹跳效果 */
+@keyframes jelly {
+    0% { transform: scale(1, 1); }
+    30% { transform: scale(1.25, 0.75); }
+    40% { transform: scale(0.75, 1.25); }
+    50% { transform: scale(1.15, 0.85); }
+    65% { transform: scale(0.95, 1.05); }
+    75% { transform: scale(1.05, 0.95); }
+    100% { transform: scale(1, 1); }
+}
+
+.nav-menu ul li {
+    transition: all 0.3s ease;
+}
+
+.nav-menu ul li:hover {
+    animation: jelly 0.8s ease;
+}
+
+/********************************* 导航菜单结束 *********************************/
+
+
+
+/********************************* 个人简介开始 *********************************/
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.profile-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: visible;
+    /* border: 3px solid var(--pink); */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    flex-shrink: 0;
+}
+
+.profile-image::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: linear-gradient(
+        45deg,
+        #C1A5A9,  /* 红色系 */
+        #E0C1B3,  /* 橙色系 */
+        #D1CEB3,  /* 黄色系 */
+        #B3C0B2,  /* 绿色系 */
+        #B8C5C9,  /* 青色系 */
+        #A5B5C3,  /* 浅蓝系 */
+        #9BA7BC,  /* 蓝色系 */
+        #B4A8BE,  /* 紫色系 */
+        #C5A9BC,  /* 紫粉系 */
+        #C4A3A5,  /* 粉红系 */
+        #C1A5A9   /* 回到起始色 */
+        );
+    
+    z-index: -1;
+    /* background-size: 400% 400%; */
+    animation: rotate 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-image:hover::before {
+    opacity: 1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.profile-image img {
+    width: 98%;
+    height: 98%;
+    object-fit: contain;
+    filter: contrast(1.1);
+    border-radius: 50%;
+    background-color: white;
+}
+
+.profile-image:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.profile-text {
+    flex-grow: 1;
+}
+
+.profile-text h1 {
+    font-size: 2.8rem;
+    /* color: white; */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+.profile-text .subtitle {
+    font-size: 1.4rem;
+    /* color: white; */
+    opacity: 0.9;
+}
+
+/* 添加响应式设计 */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .profile-text h1 {
+        font-size: 2rem;
+    }
+
+    .profile-text .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+.lang-switch {
+    position: absolute;
+    right: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* 语言切换按钮基本样式 */
+.lang-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: inline-block !important;  /* 确保按钮始终显示 */
+}
+
+/* 按钮悬停状态 */
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 按钮激活状态 */
+.lang-btn.active {
+    background: white;
+    color: var(--pink);
+}
+
+/* 语言内容切换样式 */
+[data-lang] {
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);  /* 稍微减小移动距离 */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;  /* 稍微加快速度 */
+}
+
+[data-lang].active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.4s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/********************************* header部分结束 *********************************/
+
+
+
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1, h2 {
+    color: var(--text-dark);
+    text-align:center;
+    margin-bottom: 1rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#skills li {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #A3D9A5; /* 柔和绿色块 */
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    /* padding: 2rem; */
+}
+
+.card {
+    background-color: #D1C4E9; /* 柔和淡紫色 */
+    color: #4A5568; /* 深灰蓝色文字 */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 6px 16px rgba(0, 0, 0, 0.3);
+    background-color: #B39DDB; /* 深一点的淡紫色 */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #4A5568; /* 深灰蓝色 */
+    color: white;
+    border-top: 5px solid #F8BBD0; /* 柔和粉色分割线 */
+}
+
+.candy-header {
+    background: linear-gradient(135deg, var(--pink), var(--lavender));
+    padding: 2rem;
+    text-align: center;
+    /* border-bottom: 8px solid white; */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+
+/* 温和弹跳效果 */
+/* .nav-menu ul li {
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-menu ul li:hover {
+    transform: scale(1.1) translateY(-5px);
+} */
+
+.skill-bubble {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    width: 180px;
+}
+
+.skill-bubble:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.skill-bubble:hover .progress {
+    animation-duration: 1s;
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.skill-icon {
+    font-size: 1.5rem;
+}
+
+.skill-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.skill-percent {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.2rem;
+}
+
+.candy-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 3px solid var(--pink);
+}
+
+.candy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.tech-stack {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.btn-demo, .btn-code {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+}
+
+.btn-demo {
+    background-color: var(--mint);
+    color: #333;
+}
+
+.btn-code {
+    background-color: var(--lavender);
+    color: #333;
+}
+
+.candy-footer {
+    background: linear-gradient(135deg, var(--lavender), var(--pink));
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+
+
+.social-links a[href*="github"]::before {
+    content: '🍬';
+    position: absolute;
+    right: 100%;  /* 放在链接左侧 */
+    margin-right: 10px;  /* 与链接保持一定距离 */
+    font-size: 24px;
+    animation: bounceRight 1.5s ease-in-out infinite;
+}
+
+/* 确保 GitHub 链接有正确的定位 */
+.social-links a[href*="github"] {
+    position: relative;
+}
+
+
+@keyframes bounceRight {
+    0%, 100% {
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(10px) rotate(10deg);
+    }
+}
+
+/* 环形进度条样式 */
+.skill-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-ring-circle-bg {
+    fill: none;
+    stroke: #f0f0f0;
+    stroke-width: 8;
+}
+
+.progress-ring-circle {
+    fill: none;
+    stroke: var(--pink);
+    stroke-width: 8;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+/* JavaScript 设置进度 */
+/* .progress-ring-circle {
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: calc(339.292 * (1 - var(--percent, 0)));
+} */
+
+/* 线性进度条样式 */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, 
+        var(--pink) 0%,
+        var(--lavender) 50%,
+        var(--pink) 100%
+    );
+    border-radius: 10px;
+    transition: width 0.5s ease;
+    position: relative;
+    animation: shimmer 2s infinite linear;
+    background-size: 200% 100%;
+}
+
+.progress-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        rgba(255,255,255,0.4) 50%,
+        transparent 100%
+    );
+    animation: shine 2s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+
+/* 确保按钮始终可见 */
+.lang-btn {
+    display: inline-block !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.candy-section {
+    max-width: 1400px;  
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+
+.candy-section {
+    max-width: 1600px;  /* 更宽的版本 */
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+.about-content {
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-item {
+    background: var(--lavender);  /* 使用变量保持配色一致 */
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.about-item:hover {
+    transform: translateY(-5px);
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .candy-section {
+        padding: 1rem;
+    }
+    
+    .about-content {
+        padding: 1.5rem;
+    }
+    
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 返回顶部按钮样式 */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background: var(--pink);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    z-index: 9999; /* 确保按钮在最上层 */
+}
+
+.back-to-top:hover {
+    background: var(--lavender);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.back-to-top.show {
+    display: flex;
+}
+
+/* 适配移动端 */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;  /* 添加平滑滚动效果 */
+}
+
+/* 响应式导航栏 */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .candy-menu-btn {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(45deg, var(--pink), var(--lavender));
+        border-radius: 50%;
+        position: fixed;
+        top: 20px;
+        left: 20px;  /* 改为左上角 */
+        z-index: 1001;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(255, 105, 180, 0.3);
+        transition: transform 0.3s ease;
+        /* -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        -moz-user-select: none;
+        touch-action: manipulation; */
+    }
+
+    .candy-menu-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .mobile-menu {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(135deg, rgba(255, 192, 203, 0.95), rgba(147, 112, 219, 0.95));
+        backdrop-filter: blur(10px);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-menu.active {
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        display: flex;           /* 添加 flex 布局 */
+        flex-direction: column;  /* 垂直排列 */
+        gap: 20px;              /* 使用 gap 控制间距 */
+        justify-content: center;
+    }
+
+    .mobile-menu ul li {
+        margin: 0;              /* 移除原来的 margin */
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all 0.3s ease;
+        
+    }
+
+    .mobile-menu.active ul li {
+        transform: translateY(0);
+        
+        opacity: 1;
+    }
+
+    .mobile-menu ul li a {
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+    }
+    /* 隐藏时完全移除空间占用 */
+    .mobile-menu ul li a[data-lang]:not(.active) {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* 确保激活的语言项正确显示 */
+    .mobile-menu ul li a[data-lang].active {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* 移动端语言切换按钮样式 */
+    .mobile-menu .lang-switch {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* 默认状态 */
+.candy-menu-btn, .mobile-menu {
+    display: none;
+}
+
+/* 糖果按钮样式 */
+.candy-menu-btn {
+    display: none; /* 默认隐藏 */
+}
+
+
+/* 调整导航菜单布局 */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .nav-menu {
+        padding: 0 20px;
+    }
+
+    .nav-menu ul {
+        gap: 1rem;
+        justify-content: flex-start;  /* 菜单靠左对齐 */
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;  /* 菜单和语言切换按钮分别靠两边 */
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-menu ul li a {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
+
+    /* 语言切换按钮靠右 */
+    .lang-switch {
+        margin-left: auto;  /* 自动将语言切换推到右边 */
+        padding-left: 1rem;
+    }
+
+    .lang-btn {
+        padding: 4px 8px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+/* 只在移动端显示糖果按钮 */
+@media screen and (max-width: 768px) {
+    .candy-menu-btn {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(45deg, var(--pink), var(--lavender));
+        border-radius: 50%;
+        position: fixed;
+        top: 20px;
+        left: 20px;  /* 改为左上角 */
+        z-index: 1001;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(255, 105, 180, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .candy-menu-btn:hover {
+        transform: scale(1.1);
+    }
+}
+/* 社交链接样式 */
+.social-links {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;  /* 保持居中 */
+    width: 100%;             /* 确保占满宽度 */
+}
+/* 糖果动画style */
+.candy-header {
+    position: relative;
+    background: linear-gradient(135deg, #FFB6C1, #E6E6FA);
+    padding: 2rem;
+    text-align: center;
+    min-height: 300px;
+    overflow: hidden;
+    }
+    
+    .candy {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        transform-origin: center;
+    }
+    
+    .candy.lollipop::before {
+        content: '🍭';
+        font-size: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .candy.candy-wrap::before {
+        content: '🍬';
+        font-size: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .candy.chocolate::before {
+        content: '🍫';
+        font-size: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    @keyframes fall {
+        0% {
+        transform: translateY(-20px) translateX(0) rotate(0deg);
+        opacity: 1;
+        }
+        90% {
+        opacity: 1;
+        }
+        100% {
+        transform: 
+            translateY(300px)
+            translateX(var(--swayDistance)) 
+            rotate(var(--rotate));
+        opacity: 0;
+        }
+    }
+
+.candy-container {
+    position: absolute;
+    width: 100%;
+    height: 400px; /* 默认电脑屏幕高度 */
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 手机屏幕适配 */
+@media screen and (max-width: 768px) {
+    .candy-container {
+        position: fixed;
+        height: 100vh; /* 手机使用视口高度 */
+        max-height: 300px; /* 限制最大高度 */
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-20px) translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: 
+            translateY(var(--fallDistance))
+            translateX(var(--swayDistance)) 
+            rotate(var(--rotate));
+        opacity: 0;
+    }
+}
