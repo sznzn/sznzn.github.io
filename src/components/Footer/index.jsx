@@ -8,14 +8,14 @@ const Footer = () => {
     const content = {
         en: {
             copyright: "© 2025 All rights reserved",
-            madeWith: "Made with ❤️ by Xin",
+            madeWith: "Made with ❤️ by",
             github: "GitHub",
             linkedin: "LinkedIn",
             email: "Email"
         },
         fr: {
             copyright: "© 2025 Tous droits réservés",
-            madeWith: "Fait avec ❤️ par Xin",
+            madeWith: "Fait avec ❤️ par",
             github: "GitHub",
             linkedin: "LinkedIn",
             email: "Email"
