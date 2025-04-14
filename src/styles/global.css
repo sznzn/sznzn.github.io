@@ -14,6 +14,9 @@
     --text-light: #A0AEC0;   /* 浅灰蓝色 - 辅助文字 */
 
     --primary-font: 'Quicksand', sans-serif;
+    --title-font: 'Montserrat', sans-serif;
+    --elegant-font: 'Playfair Display', serif;
+    --modern-font: 'Poppins', sans-serif;
 }
 
 body {
@@ -61,13 +64,27 @@ header {
     text-decoration: none;
     position: relative;
     padding: 5px 10px;
-    font-weight: 400;
     transition: color 0.3s ease;
+
+    
+    background: linear-gradient(45deg, #4A2B5F, #FF69B4);  /* 深紫色到亮粉色 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
 }
 
 /* 悬停时的文字颜色 - 保持白色但可以稍微调整透明度制造效果 */
 .nav-menu ul li a:hover {
-    color: rgba(255, 255, 255, 0.8);  /* 白色但带一点透明效果 */
+    /* color: rgba(255, 255, 255, 0.8);  白色但带一点透明效果 */
+    background: linear-gradient(45deg, #FF69B4, #4A2B5F);  /* 亮粉色到深紫色 */
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .nav-menu ul li a::before {
@@ -150,17 +167,11 @@ header {
     border: 1px solid transparent;
     background: linear-gradient(
         45deg,
-        #C1A5A9,  /* 红色系 */
-        #E0C1B3,  /* 橙色系 */
-        #D1CEB3,  /* 黄色系 */
-        #B3C0B2,  /* 绿色系 */
-        #B8C5C9,  /* 青色系 */
-        #A5B5C3,  /* 浅蓝系 */
-        #9BA7BC,  /* 蓝色系 */
-        #B4A8BE,  /* 紫色系 */
-        #C5A9BC,  /* 紫粉系 */
-        #C4A3A5,  /* 粉红系 */
-        #C1A5A9   /* 回到起始色 */
+        #4A2B5F,  /* 深紫色 */
+        #FF69B4,  /* 亮粉色 */
+        #4A2B5F,  /* 深紫色 */
+        #FF69B4,  /* 亮粉色 */
+        #4A2B5F   /* 深紫色 */
         );
     
     z-index: -1;
@@ -203,16 +214,17 @@ header {
 
 .profile-text h1 {
     font-size: 2.8rem;
-    /* color: white; */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);  
-    color: #333;
     
+    color: #4A2B5F;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     margin-bottom: 1rem;
+    font-weight: 700;
+    opacity: 0.9;
 }
 
 .profile-text .subtitle {
     font-size: 1.4rem;
-    /* color: white; */
+    color: #4A2B5F;
     opacity: 0.9;
 }
 
@@ -243,8 +255,8 @@ header {
 /* 语言切换按钮基本样式 */
 .lang-btn {
     background: transparent;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid  #4A2B5F;
+    color: #4A2B5F;
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
     cursor: pointer;
@@ -255,14 +267,47 @@ header {
 
 /* 按钮悬停状态 */
 .lang-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(74, 43, 95, 0.1);
+    border-color: #FF69B4;
+    color: #FF69B4;
 }
 
 /* 按钮激活状态 */
 .lang-btn.active {
-    background: white;
-    color: var(--pink);
+    background: #4A2B5F;
+    color: white;
+    border-color: #4A2B5F;
 }
+/* 移动端语言切换按钮样式 */
+.mobile-menu .lang-switch {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mobile-menu .lang-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.mobile-menu .lang-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu .lang-btn.active {
+    background: white;
+    color: #4A2B5F;
+} 
 
 /* 语言内容切换样式 */
 [data-lang] {
@@ -992,3 +1037,30 @@ html {
         opacity: 0;
     }
 }
+
+/* 在 header 中使用新字体 */
+/* .candy-header h1 {
+    font-family: var(--title-font);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+} */
+
+/* 或者使用 Playfair Display */
+/* .candy-header h1 {
+    font-family: var(--elegant-font);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+} */
+
+/* 或者使用 Poppins */
+/* .candy-header h1 {
+    font-family: var(--modern-font);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+} */

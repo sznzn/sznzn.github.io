@@ -1,13 +1,13 @@
 import React from 'react';
 import { LanguageProvider } from './context/LanguageProvider';
 import Header from './components/Header';
-
+import CandyAnimation from './components/CandyAnimation';
 import './styles/global.css';
 
 const App = () => {
   return (
     <LanguageProvider>
-      
+      <CandyAnimation />
       <div id="top">
         <Header />
         <a href="#top" className="back-to-top" title="Back to top">↑</a>

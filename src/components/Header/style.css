@@ -1,0 +1,86 @@
+/* 只在移动端显示糖果按钮 */
+@media screen and (max-width: 768px) {
+    .candy-menu-btn {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(45deg, var(--pink), var(--lavender));
+        border-radius: 50%;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1001;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(255, 105, 180, 0.3);
+        transition: all 0.3s ease;
+        border: none;
+        animation: pulse 2s infinite;
+    }
+
+    .candy-menu-btn.active {
+        transform: rotate(180deg);
+        background: linear-gradient(45deg, var(--lavender), var(--pink));
+    }
+
+    .candy-menu-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(135deg, rgba(255, 192, 203, 0.95), rgba(147, 112, 219, 0.95));
+        backdrop-filter: blur(10px);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-menu.active {
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        display: flex;           /* 添加 flex 布局 */
+        flex-direction: column;  /* 垂直排列 */
+        gap: 20px;              /* 使用 gap 控制间距 */
+        justify-content: center;
+    }
+
+    .mobile-menu ul li {
+        margin: 0;              /* 移除原来的 margin */
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-menu.active ul li {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .mobile-menu ul li a {
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+    }
+}
