@@ -1,0 +1,167 @@
+.candy-section {
+    max-width: 1600px;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+.projects-description {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.category-tag {
+    background: var(--pink);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.candy-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 3px solid transparent;
+    position: relative;
+}
+
+.candy-card:hover {
+    border-color: var(--pink);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: none !important;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tech-tag {
+    background: var(--lavender);
+    color: var(--pink);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.card-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-code, .btn-demo {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.btn-code {
+    background: var(--pink);
+}
+
+.btn-demo {
+    background: var(--lavender);
+    color: var(--text-dark);
+}
+
+.btn-code:hover, .btn-demo:hover {
+    transform: scale(1.05);
+}
+
+.coming-soon {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--pink);
+    margin-top: 2rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .candy-section {
+        padding: 1rem;
+    }
+    
+    .projects-description {
+        font-size: 1.1rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .categories-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

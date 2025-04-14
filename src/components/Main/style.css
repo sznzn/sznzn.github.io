@@ -1,0 +1,26 @@
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--backColor);
+    padding: 2rem 0;
+}
+
+.content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 1rem 0;
+    }
+    
+    .content-wrapper {
+        padding: 0 1rem;
+        gap: 2rem;
+    }
+}

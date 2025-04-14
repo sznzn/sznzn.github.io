@@ -2,15 +2,15 @@ import React from 'react';
 import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
-
+import './style.css';
 
 const Main = () => {
     return (
-        <div className="main-container">
-            {/* <About />
+        <main className="main-container">
+            <About />
             <Skills />
-            <Projects /> */}
-        </div>
+            <Projects />
+        </main>
     );
 };
 

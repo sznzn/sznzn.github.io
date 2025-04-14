@@ -522,30 +522,6 @@ footer {
 
 
 
-.social-links a[href*="github"]::before {
-    content: '🍬';
-    position: absolute;
-    right: 100%;  /* 放在链接左侧 */
-    margin-right: 10px;  /* 与链接保持一定距离 */
-    font-size: 24px;
-    animation: bounceRight 1.5s ease-in-out infinite;
-}
-
-/* 确保 GitHub 链接有正确的定位 */
-.social-links a[href*="github"] {
-    position: relative;
-}
-
-
-@keyframes bounceRight {
-    0%, 100% {
-        transform: translateX(0) rotate(0deg);
-    }
-    50% {
-        transform: translateX(10px) rotate(10deg);
-    }
-}
-
 /* 环形进度条样式 */
 .skill-circle {
     position: relative;
@@ -710,42 +686,32 @@ footer {
 /* 返回顶部按钮样式 */
 .back-to-top {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--lavender);
+    border: 2px solid var(--pink);
+    color: var(--text-dark);
     width: 40px;
     height: 40px;
-    background: var(--pink);
-    color: white;
     border-radius: 50%;
-    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    z-index: 9999; /* 确保按钮在最上层 */
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
 }
 
 .back-to-top:hover {
-    background: var(--lavender);
     transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.back-to-top.show {
-    display: flex;
-}
-
-/* 适配移动端 */
 @media (max-width: 768px) {
     .back-to-top {
-        bottom: 20px;
-        right: 20px;
+        bottom: 1rem;
+        right: 1rem;
         width: 35px;
         height: 35px;
-        font-size: 18px;
     }
 }
 
@@ -1064,3 +1030,14 @@ html {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     margin-bottom: 1rem;
 } */
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+main {
+    flex: 1;
+}
