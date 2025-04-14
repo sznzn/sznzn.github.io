@@ -51,7 +51,7 @@ npm run deploy
 
 Feel free to reach out:
 - GitHub: [sznzn](https://github.com/sznzn)
-- Email: [your email]
+- Email: [xinxin.liu@outlook.fr]
 
 ## License 📄
 
@@ -112,7 +112,7 @@ npm run deploy
 
 N'hésitez pas à me contacter :
 - GitHub : [sznzn](https://github.com/sznzn)
-- Email : [votre email]
+- Email : [xinxin.liu@outlook.fr]
 
 ## Licence 📄
 
