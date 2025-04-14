@@ -1,3 +1,123 @@
+# My Sweet Portfolio 🍬
+
+This is my first portfolio website built with React and Vite!
+
+## Features ✨
+
+- 🚀 Built with Vite + React
+- 🌐 Multi-language support (English, French, Chinese)
+- 🎨 Responsive design for all devices
+- 🍭 Cute candy theme design
+- ⚡ Fast loading and smooth animations
+
+## Tech Stack 🛠️
+
+- React 19
+- Vite
+- CSS/SASS
+- React Router
+- Context API
+
+## Highlights 💫
+
+- Language switching
+- Responsive navigation
+- Skills showcase cards
+- Project gallery
+- Candy animation effects
+- Back to top button
+
+## Local Development 🏃‍♂️
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+## Visit Website 🌍
+
+[Click here to visit my portfolio](https://sznzn.github.io)
+
+## Contact 📧
+
+Feel free to reach out:
+- GitHub: [sznzn](https://github.com/sznzn)
+- Email: [your email]
+
+## License 📄
+
+MIT License
+
+---
+
+# Mon Portfolio Doux 🍬
+
+Ceci est mon premier site portfolio construit avec React et Vite !
+
+## Caractéristiques ✨
+
+- 🚀 Construit avec Vite + React
+- 🌐 Support multilingue (Anglais, Français, Chinois)
+- 🎨 Design responsive pour tous les appareils
+- 🍭 Thème mignon aux couleurs de bonbons
+- ⚡ Chargement rapide et animations fluides
+
+## Technologies 🛠️
+
+- React 19
+- Vite
+- CSS/SASS
+- React Router
+- Context API
+
+## Points Forts 💫
+
+- Changement de langue
+- Navigation responsive
+- Cartes de compétences
+- Galerie de projets
+- Effets d'animation de bonbons
+- Bouton retour en haut
+
+## Développement Local 🏃‍♂️
+
+```bash
+# Installer les dépendances
+npm install
+
+# Démarrer le serveur de développement
+npm run dev
+
+# Construire pour la production
+npm run build
+
+# Déployer sur GitHub Pages
+npm run deploy
+```
+
+## Visiter le Site 🌍
+
+[Cliquez ici pour visiter mon portfolio](https://sznzn.github.io)
+
+## Contact 📧
+
+N'hésitez pas à me contacter :
+- GitHub : [sznzn](https://github.com/sznzn)
+- Email : [votre email]
+
+## Licence 📄
+
+MIT License
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
