@@ -1,0 +1,39 @@
+/* 暗色主题样式 */
+.candy-footer.dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.candy-footer.dark .social-icon {
+    color: #ffffff;
+}
+
+.candy-footer.dark .social-icon:hover {
+    color: #ff6b6b;
+}
+
+.candy-footer.dark .theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 过渡效果 */
+.candy-footer {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 主题切换按钮样式 */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+} 

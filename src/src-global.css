@@ -1,0 +1,124 @@
+
+
+
+
+
+
+
+
+
+
+.profile-image::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: linear-gradient(
+        45deg,
+        #4A2B5F,  /* 深紫色 */
+        #FF69B4,  /* 亮粉色 */
+        #4A2B5F,  /* 深紫色 */
+        #FF69B4,  /* 亮粉色 */
+        #4A2B5F   /* 深紫色 */
+    );
+    background-size: 400% 400%;
+    animation: rotate 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes rotate {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* 语言切换按钮基本样式 */
+.lang-btn {
+    background: transparent;
+    border: 2px solid #4A2B5F;
+    color: #4A2B5F;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: inline-block !important;
+}
+
+/* 按钮悬停状态 */
+.lang-btn:hover {
+    background: rgba(74, 43, 95, 0.1);
+    border-color: #FF69B4;
+    color: #FF69B4;
+}
+
+/* 按钮激活状态 */
+.lang-btn.active {
+    background: #4A2B5F;
+    color: white;
+    border-color: #4A2B5F;
+}
+
+/* 移动端语言切换按钮样式 */
+.mobile-menu .lang-switch {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mobile-menu .lang-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.mobile-menu .lang-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu .lang-btn.active {
+    background: white;
+    color: #4A2B5F;
+}
+
+.profile-text h1 {
+    font-size: 2.8rem;
+    color: #4A2B5F;  /* 深紫色，保持与主题一致但更清晰 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.profile-text .subtitle {
+    font-size: 1.4rem;
+    color: #4A2B5F;
+    opacity: 0.9;
+}
+
+.candy-header {
+    position: relative;
+    background: linear-gradient(135deg, var(--pink), var(--lavender));
+    padding: 2rem;
+    text-align: center;
+    min-height: 300px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+} 
