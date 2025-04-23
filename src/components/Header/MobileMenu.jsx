@@ -30,31 +30,31 @@ const MobileMenu = () => {
                     <li>
                         <a href="#about" onClick={closeMenu}>
                             {currentLang === 'en' ? 'About me' : 
-                             currentLang === 'fr' ? 'À Propos' : '关于我'}
+                            currentLang === 'fr' ? 'À Propos' : '关于我'}
                         </a>
                     </li>
                     <li>
                         <a href="#skills" onClick={closeMenu}>
                             {currentLang === 'en' ? 'Skills' : 
-                             currentLang === 'fr' ? 'Compétences' : '技能'}
+                            currentLang === 'fr' ? 'Compétences' : '技能'}
                         </a>
                     </li>
                     <li>
                         <a href="#projects" onClick={closeMenu}>
                             {currentLang === 'en' ? 'Projects' : 
-                             currentLang === 'fr' ? 'Projets' : '项目'}
+                            currentLang === 'fr' ? 'Projets' : '项目'}
                         </a>
                     </li>
                     <li>
                         <a href="#contact" onClick={closeMenu}>
                             {currentLang === 'en' ? 'Contact' : 
-                             currentLang === 'fr' ? 'Contact' : '联系'}
+                            currentLang === 'fr' ? 'Contact' : '联系'}
                         </a>
                     </li>
                     <li>
                         <a href="#blog" onClick={closeMenu}>
                             {currentLang === 'en' ? 'Blog' : 
-                             currentLang === 'fr' ? 'Blog' : '博客'}
+                            currentLang === 'fr' ? 'Blog' : '博客'}
                         </a>
                     </li>
                 </ul>

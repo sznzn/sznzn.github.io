@@ -1,8 +1,4 @@
-.candy-section {
-    max-width: 1600px;
-    margin: 3rem auto;
-    padding: 2rem;
-}
+
 
 .projects-description {
     text-align: center;
@@ -13,12 +9,7 @@
     margin: 0 auto 2rem auto;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
+
 
 .categories-container {
     display: flex;
@@ -53,6 +44,7 @@
 .candy-card {
     background: white;
     border-radius: 15px;
+    padding: 1.5rem;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
@@ -107,6 +99,7 @@
     text-decoration: none;
     color: white;
     transition: transform 0.3s ease;
+    font-weight: 600;
 }
 
 .btn-code {
@@ -130,17 +123,7 @@
     animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
+
 
 /* 响应式调整 */
 @media (max-width: 768px) {

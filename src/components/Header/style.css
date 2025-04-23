@@ -5,6 +5,16 @@ header {
 }
 /* 桌面端的nav */
 /******************** 导航菜单样式 ***********************/
+.candy-header {
+    background: linear-gradient(135deg, var(--pink), var(--lavender));
+    padding: 2rem;
+    text-align: center;
+    /* border-bottom: 8px solid white; */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-height: 300px;
+    overflow: hidden;
+}
+
 .nav-menu {
     position: relative;
     display: flex;
@@ -72,22 +82,45 @@ header {
 }
 
 
+/* 默认状态 */
+.candy-menu-btn, .mobile-menu {
+    display: none;
+}
 
+/* 糖果按钮样式 */
+.candy-menu-btn {
+    display: none; /* 默认隐藏 */
+}
 
 /******************响应式 tablette 模式*********************/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .nav-menu {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; /* 菜单和语言切换按钮分别靠两边 */
         align-items: center;
         width: 100%;
         padding: 0 1rem;
         font-size: 1rem;
         
     }
+    .nav-menu ul {
+        gap: 1rem;
+        justify-content: flex-start;  /* 菜单靠左对齐 */
+    }
+    .nav-menu ul li a {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
 
     .lang-switch {
-        right: 1rem;
+        /* right: 1rem; */
+        margin-left: auto;  /* 自动将语言切换推到右边 */
+        padding-left: 1rem;
+    
+    }
+    .lang-btn {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.8rem;
     }
 
 }
@@ -185,7 +218,18 @@ header {
         padding: 10px 20px;
         display: block;
     }
+    /* 移动端语言切换按钮样式 */
+    .mobile-menu .lang-switch {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
     /* 以上是移动端的nav的一些变化 */
+
 }
 
 /******************** Header的profile 个人简介***********************/
