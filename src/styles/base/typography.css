@@ -1,0 +1,64 @@
+/* 这里把reset.css中的样式移到这里,因为内容不多 */
+html {
+    scroll-behavior: smooth;  /* 添加平滑滚动效果 */
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--backColor);
+    color: var(--text-dark);
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    /* 混合了一些可以添加到reset.css中的样式 */
+}
+
+h1, h2 {
+    text-align:center;
+    margin-bottom: 1rem;
+}
+/* h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+p {
+    font-size: 1rem;
+}
+
+.lang-btn {
+    font-size: 0.875rem;
+} */
+
+
+/* 在 header 中使用新字体 */
+/* .candy-header h1 {
+    font-family: var(--title-font);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+} */
+
+/* 或者使用 Playfair Display */
+/* .candy-header h1 {
+    font-family: var(--elegant-font);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+} */
+
+/* 或者使用 Poppins */
+/* .candy-header h1 {
+    font-family: var(--modern-font);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+} */

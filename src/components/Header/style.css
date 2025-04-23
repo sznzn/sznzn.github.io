@@ -1,5 +1,138 @@
+header {
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 5px solid #F8BBD0; /* 淡紫色分割线 */
+}
+/* 桌面端的nav */
+/******************** 导航菜单样式 ***********************/
+.candy-header {
+    background: linear-gradient(135deg, var(--pink), var(--lavender));
+    padding: 2rem;
+    text-align: center;
+    /* border-bottom: 8px solid white; */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.nav-menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+
+.nav-menu ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+/* 菜单链接基本样式 */
+.nav-menu ul li a {
+    
+    background: linear-gradient(45deg, #4A2B5F, #FF69B4);  /* 深紫色到亮粉色 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* 悬停时的渐变效果 */
+.nav-menu ul li a:hover {
+    background: linear-gradient(45deg, #FF69B4, #4A2B5F);  /* 亮粉色到深紫色 */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.nav-menu ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4A2B5F, #FF69B4);  /* 深紫色到亮粉色 */
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-menu ul li a:hover::before {
+    width: 100%;
+}
+
+.nav-menu ul li {
+    transition: all 0.3s ease;
+}
+
+.nav-menu ul li:hover {
+    animation: jelly 0.8s ease;
+}
+
+
+/* 默认状态 */
+.candy-menu-btn, .mobile-menu {
+    display: none;
+}
+
+/* 糖果按钮样式 */
+.candy-menu-btn {
+    display: none; /* 默认隐藏 */
+}
+
+/******************响应式 tablette 模式*********************/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .nav-menu {
+        display: flex;
+        justify-content: space-between; /* 菜单和语言切换按钮分别靠两边 */
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+        font-size: 1rem;
+        
+    }
+    .nav-menu ul {
+        gap: 1rem;
+        justify-content: flex-start;  /* 菜单靠左对齐 */
+    }
+    .nav-menu ul li a {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
+
+    .lang-switch {
+        /* right: 1rem; */
+        margin-left: auto;  /* 自动将语言切换推到右边 */
+        padding-left: 1rem;
+    
+    }
+    .lang-btn {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+}
+
+
+
+
+
+
 /* 只在移动端显示糖果按钮 */
 @media screen and (max-width: 768px) {
+    /* 糖果按钮 */
     .candy-menu-btn {
         display: block;
         width: 40px;
@@ -26,10 +159,12 @@
         transform: scale(1.1);
     }
 
+    /* 导航菜单没有了 */
     .nav-menu {
         display: none;
     }
 
+    /* 移动端导航菜单 */
     .mobile-menu {
         display: flex;
         position: fixed;
@@ -83,4 +218,192 @@
         padding: 10px 20px;
         display: block;
     }
+    /* 移动端语言切换按钮样式 */
+    .mobile-menu .lang-switch {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    /* 以上是移动端的nav的一些变化 */
+
 }
+
+/******************** Header的profile 个人简介***********************/
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.profile-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: visible;
+    /* border: 3px solid var(--pink); */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    flex-shrink: 0;
+}
+
+.profile-image::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: linear-gradient(
+        45deg,
+        #4A2B5F,  /* 深紫色 */
+        #FF69B4,  /* 亮粉色 */
+        #4A2B5F,  /* 深紫色 */
+        #FF69B4,  /* 亮粉色 */
+        #4A2B5F   /* 深紫色 */
+        );
+    
+    z-index: -1;
+    /* background-size: 400% 400%; */
+    animation: rotate 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.profile-image:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.profile-image:hover::before {
+    opacity: 1;
+}
+
+.profile-image img {
+    width: 98%;
+    height: 98%;
+    object-fit: contain;
+    filter: contrast(1.1);
+    border-radius: 50%;
+    background-color: white;
+}
+
+/* 头像结束 */
+.profile-text {
+    flex-grow: 1;
+}
+
+.profile-text h1 {
+    font-size: 2.8rem;
+    
+    color: #4A2B5F;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+.profile-text .subtitle {
+    font-size: 1.4rem;
+    color: #4A2B5F;
+    opacity: 0.9;
+}
+/* 文字简介响应式 */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .profile-text h1 {
+        font-size: 2rem;
+    }
+
+    .profile-text .subtitle {
+        font-size: 1.2rem;
+    }
+}
+/* 文字简介结束 */
+
+/******************** 语言切换按钮 ***********************/
+
+.lang-switch {
+    position: absolute;
+    right: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* 语言切换按钮基本样式 */
+.lang-btn {
+    background: transparent;
+    border: 2px solid  #4A2B5F;
+    color: #4A2B5F;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: inline-block !important;  /* 确保按钮始终显示 */
+}
+
+/* 按钮悬停状态 */
+.lang-btn:hover {
+    background: rgba(74, 43, 95, 0.1);
+    border-color: #FF69B4;
+    color: #FF69B4;
+}
+
+/* 按钮激活状态 */
+.lang-btn.active {
+    background: #4A2B5F;
+    color: white;
+    border-color: #4A2B5F;
+}
+/* 移动端语言切换按钮样式 */
+.mobile-menu .lang-switch {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mobile-menu .lang-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.mobile-menu .lang-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu .lang-btn.active {
+    background: white;
+    color: #4A2B5F;
+} 
+

@@ -1,0 +1,73 @@
+/* reset.css 但在这个项目中我们暂时不适用*/
+/* 1. 基础重置 */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. 文档重置 */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3. 媒体元素重置 */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 4. 表单元素重置 */
+input, button, textarea, select {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* 5. 文本元素重置 */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 6. 列表重置 */
+ul, ol {
+    list-style: none;
+}
+
+/* 7. 链接重置 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 8. 按钮重置 */
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* 9. 表格重置 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 10. 引用重置 */
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}

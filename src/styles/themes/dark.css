@@ -1,0 +1,57 @@
+/* 全局暗色主题样式 */
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* 导航栏暗色主题 */
+.navbar.dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* 主要内容区域暗色主题 */
+.main-content.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* 卡片暗色主题 */
+.card.dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+
+/* 链接暗色主题 */
+a.dark {
+    color: #64b5f6;
+}
+
+a.dark:hover {
+    color: #90caf9;
+}
+
+/* 按钮暗色主题 */
+button.dark {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+button.dark:hover {
+    background-color: #444;
+}
+
+/* 输入框暗色主题 */
+input.dark,
+textarea.dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+
+/* 过渡效果 */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+} 

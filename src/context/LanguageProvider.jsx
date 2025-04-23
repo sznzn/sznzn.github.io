@@ -19,4 +19,3 @@ export const LanguageProvider = ({ children }) => {
     );
     // 上下文提供组织者组件，用来包装其他组件的。
 };
-

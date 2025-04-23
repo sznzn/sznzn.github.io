@@ -1,3 +1,7 @@
+main {
+    flex: 1;
+}
+
 .main-container {
     width: 100%;
     min-height: 100vh;
@@ -5,13 +9,10 @@
     padding: 2rem 0;
 }
 
-.content-wrapper {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+.candy-section {
+    max-width: 1600px;  /* 更宽的版本 */
+    margin: 3rem auto;
+    padding: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -19,8 +20,7 @@
         padding: 1rem 0;
     }
     
-    .content-wrapper {
-        padding: 0 1rem;
-        gap: 2rem;
+    .candy-section {
+        padding: 1rem;
     }
 }

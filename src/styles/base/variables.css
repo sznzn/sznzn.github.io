@@ -1,0 +1,20 @@
+:root {
+    --pink: #FFB6C1;
+    --mint: #7EDAB9;
+    --lavender: #E6E6FA;
+    --yellow: #FFFACD;
+    --blue: #87CEEB;
+    --backColor: #FFF5F5;
+
+
+    /* 文字颜色 */
+    /* --text-dark: #4A5568;    深灰蓝色 - 主要文字 */
+    --text-dark: #4A2B5F;    /* 深灰蓝色 - 主要文字 */
+    --text-medium: #718096;  /* 中灰蓝色 - 次要文字 */
+    --text-light: #A0AEC0;   /* 浅灰蓝色 - 辅助文字 */
+
+    --primary-font: 'Quicksand', sans-serif;
+    /* --title-font: 'Montserrat', sans-serif;
+    --elegant-font: 'Playfair Display', serif;
+    --modern-font: 'Poppins', sans-serif; */
+}

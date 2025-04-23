@@ -1,14 +1,18 @@
 import React from 'react';
+import AnimatedContent from './components/common/AnimatedContent';
 import { LanguageProvider } from './context/LanguageProvider';
+import { useLanguage } from './hooks/useLanguage';  
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import CandyAnimation from './components/CandyAnimation';
-import './styles/global.css';
 
-const App = () => {
+
+const AppContent = () => {
+  const { currentLang } = useLanguage();
   return (
-    <LanguageProvider>
+    <AnimatedContent currentLang={currentLang}>
+    
       <div id="top" className="app-container">
         <CandyAnimation />
         <Header />
@@ -16,6 +20,15 @@ const App = () => {
         <Footer />
         <a href="#top" className="back-to-top" title="Back to top">↑</a>
       </div>
+    
+    </AnimatedContent>
+  );
+};
+
+const App = () => {
+  return (
+    <LanguageProvider>
+      <AppContent />
     </LanguageProvider>
   );
 };
