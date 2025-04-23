@@ -107,3 +107,27 @@
         background: linear-gradient(90deg, var(--pink), var(--lavender));
     }
 }
+
+@keyframes glowEffect {
+    0% {
+        filter: blur(15px);
+        box-shadow: 0 0 30px #E6E6FA,
+                    0 0 60px #D8BFD8,
+                    0 0 90px #DDA0DD;
+        transform: scale(0.9);
+    }
+    50% {
+        filter: blur(25px);
+        box-shadow: 0 0 50px #E6E6FA,
+                    0 0 100px #D8BFD8,
+                    0 0 150px #DDA0DD;
+        transform: scale(1.1);
+    }
+    100% {
+        filter: blur(15px);
+        box-shadow: 0 0 30px #E6E6FA,
+                    0 0 60px #D8BFD8,
+                    0 0 90px #DDA0DD;
+        transform: scale(0.9);
+    }
+}
