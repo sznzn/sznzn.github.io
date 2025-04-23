@@ -7,7 +7,7 @@ const Profile = () => {
     return (
         <div className="profile-section">
             <div className="profile-image">
-                <img src="images/my-photo.png" alt="My Photo"/>
+                <img src="images/lovely.png" alt="My Photo"/>
             </div>
             <div class="profile-text">
                 <h1>{currentLang === 'en' ? 'Welcome to My Sweet Portfolio' : 

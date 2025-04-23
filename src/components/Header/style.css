@@ -249,59 +249,78 @@ header {
     height: 200px;
     border-radius: 50%;
     overflow: visible;
-    /* border: 3px solid var(--pink); */
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    background-color: white;
+    transition: all 0.5s ease;
+    background-color: #E6E6FA;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1px;
     flex-shrink: 0;
+    cursor: pointer;
+    border: 3px solid transparent;
+    background-image: linear-gradient(#E6E6FA, #E6E6FA), 
+                    linear-gradient(45deg, var(--pink), var(--lavender));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    z-index: 1;  /* 确保图片在光晕上面 */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 改为 cover 以更好地填充圆形 */
+    border-radius: 50%;
+    background-color: transparent;  /* 移除白色背景 */
+    filter: none;  /* 移除对比度滤镜 */
+    transition: transform 0.8s ease-out;
+    transform: rotate(0deg);
+}
+
+.profile-image:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    background-image: linear-gradient(#E6E6FA, #E6E6FA), 
+                    linear-gradient(180deg, var(--lavender), var(--pink));
+    
+}
+
+
+
+.profile-image:hover img {
+    transform: rotate(360deg);
 }
 
 .profile-image::before {
     content: '';
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
     border-radius: 50%;
-    border: 1px solid transparent;
     background: linear-gradient(
         45deg,
-        #4A2B5F,  /* 深紫色 */
-        #FF69B4,  /* 亮粉色 */
-        #4A2B5F,  /* 深紫色 */
-        #FF69B4,  /* 亮粉色 */
-        #4A2B5F   /* 深紫色 */
-        );
-    
-    z-index: -1;
-    /* background-size: 400% 400%; */
-    animation: rotate 4s linear infinite;
+        #E6E6FA,  /* 薰衣草色 */
+        #D8BFD8,  /* 蓟色 */
+        #DDA0DD,  /* 梅红色 */
+        #E6E6FA   /* 薰衣草色 */
+    );
+    z-index: -2;
+    filter: blur(15px);
+    box-shadow: 0 0 30px #E6E6FA,
+                0 0 60px #D8BFD8,
+                0 0 90px #DDA0DD;
     opacity: 0;
     transition: opacity 0.3s ease;
-}
-.profile-image:hover {
-    transform: scale(1.05) rotate(5deg);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .profile-image:hover::before {
     opacity: 1;
+    animation: glowEffect 2s ease-in-out infinite;
 }
 
-.profile-image img {
-    width: 98%;
-    height: 98%;
-    object-fit: contain;
-    filter: contrast(1.1);
-    border-radius: 50%;
-    background-color: white;
-}
+
+
 
 /* 头像结束 */
 .profile-text {
