@@ -34,7 +34,13 @@ const AnimatedContent = ({ children, currentLang }) => {
                     width: '100%',
                     height: '100%',
                     minHeight: '100vh',
-                    zIndex: 1
+                    zIndex: 1,
+                    
+                    backgroundImage: 'url(./images/donut.png)',
+                    backgroundSize: '10%',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center center',
+                    backgroundAttachment: 'fixed'  // 添加这行使图片相对于视口固定
                 }}
             >
                 {/* 彩色条纹幕布 */}
@@ -67,7 +73,8 @@ const AnimatedContent = ({ children, currentLang }) => {
                 <motion.div
                     style={{
                         width: '100%',
-                        height: '100%'
+                        height: '100%',
+                        
                     }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
