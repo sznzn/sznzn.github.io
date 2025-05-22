@@ -10,16 +10,16 @@ const Projects = () => {
             title: "Sweet Projects",
             description: "My projects are currently being organized and updated. They are mainly divided into four categories:",
             categories: [
-                "CSS Animations & Effects",
+                "CSS Positioning Tutorial",
                 "JavaScript Mini Programs",
                 "Symfony Management System",
                 "Blog System (In Progress)"
             ],
             comingSoon: "More projects coming soon... 🚀",
             project1: {
-                title: "CSS Animation Collection",
-                description: "A collection of creative CSS animations and effects, showcasing various interactive elements and transitions.",
-                tech: ["HTML", "CSS", "SASS", "JavaScript"]
+                title: "CSS Positioning Tutorial",
+                description: "A comprehensive tutorial on CSS positioning, explaining the concepts and practical applications of fixed, absolute, relative, and other positioning properties.",
+                tech: ["HTML", "CSS", "JavaScript"]
             },
             project2: {
                 title: "JavaScript Mini Apps",
@@ -36,16 +36,16 @@ const Projects = () => {
             title: "Mes Projets Doux",
             description: "Mes projets sont actuellement en cours d'organisation et de mise à jour. Ils sont principalement divisés en quatre catégories :",
             categories: [
-                "Animations & Effets CSS",
+                "Tutoriel de Positionnement CSS",
                 "Mini Programmes JavaScript",
                 "Système de Gestion Symfony",
                 "Système de Blog (En Cours)"
             ],
             comingSoon: "Plus de projets à venir... 🚀",
             project1: {
-                title: "Collection d'Animations CSS",
-                description: "Une collection d'animations et d'effets CSS créatifs, présentant divers éléments interactifs et transitions.",
-                tech: ["HTML", "CSS", "SASS", "JavaScript"]
+                title: "Tutoriel sur le Positionnement CSS",
+                description: "Un tutoriel complet sur le positionnement CSS, expliquant les concepts et les applications pratiques des propriétés de positionnement fixed, absolute, relative et autres.",
+                tech: ["HTML", "CSS", "JavaScript"]
             },
             project2: {
                 title: "Mini Applications JavaScript",
@@ -62,16 +62,16 @@ const Projects = () => {
             title: "我的甜品项目",
             description: "我的项目正在整理和更新中，主要分为四个类别：",
             categories: [
-                "CSS动画与特效",
+                "CSS定位教程",
                 "JavaScript小程序",
                 "Symfony管理系统",
                 "博客系统（开发中）"
             ],
             comingSoon: "更多项目即将到来... 🚀",
             project1: {
-                title: "CSS动画集锦",
-                description: "一系列创意CSS动画和特效，展示各种交互元素和过渡效果。",
-                tech: ["HTML", "CSS", "SASS", "JavaScript"]
+                title: "CSS定位详解教程",
+                description: "一个全面的CSS定位教程，深入讲解fixed、absolute、relative等定位属性的概念和实际应用场景。",
+                tech: ["HTML", "CSS", "JavaScript"]
             },
             project2: {
                 title: "JavaScript小程序",
@@ -101,7 +101,7 @@ const Projects = () => {
                 <div className="candy-card">
                     <div className="card-content">
                         <h3>{content[currentLang].project1.title}</h3>
-                        <img src="https://picsum.photos/200/150?random=1" alt="project screenshot" className="project-image" />
+                        <img src="/src/assets/images/css-positioning-tutorial.png" alt="CSS Positioning Tutorial" className="project-image" />
                         <p className="project-description">{content[currentLang].project1.description}</p>
                         <div className="tech-stack">
                             {content[currentLang].project1.tech.map((tech, index) => (
@@ -109,10 +109,10 @@ const Projects = () => {
                             ))}
                         </div>
                         <div className="card-links">
-                            <a href="#" className="btn-code">
+                            <a href="https://github.com/sznzn/position-css" target="_blank" className="btn-code">
                                 <span>GitHub</span>
                             </a>
-                            <a href="#" className="btn-demo">
+                            <a href="https://sznzn.github.io/position-css/" target="_blank" className="btn-demo">
                                 <span>Demo</span>
                             </a>
                         </div>
@@ -129,11 +129,11 @@ const Projects = () => {
                             ))}
                         </div>
                         <div className="card-links">
-                            <a href="#" className="btn-code">
-                                <span>GitHub</span>
+                            <a className="btn-code disabled">
+                                <span>Not Available</span>
                             </a>
-                            <a href="#" className="btn-demo">
-                                <span>Demo</span>
+                            <a className="btn-demo disabled">
+                                <span>Coming Soon</span>
                             </a>
                         </div>
                     </div>
@@ -149,11 +149,11 @@ const Projects = () => {
                             ))}
                         </div>
                         <div className="card-links">
-                            <a href="#" className="btn-code">
-                                <span>GitHub</span>
+                            <a className="btn-code disabled">
+                                <span>Not Available</span>
                             </a>
-                            <a href="#" className="btn-demo">
-                                <span>Demo</span>
+                            <a className="btn-demo disabled">
+                                <span>Coming Soon</span>
                             </a>
                         </div>
                     </div>
