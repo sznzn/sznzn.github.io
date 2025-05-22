@@ -37,7 +37,7 @@ const AnimatedContent = ({ children, currentLang }) => {
                     zIndex: 1,
                     
                     backgroundImage: 'url(./images/donut.png)',
-                    backgroundSize: '10%',
+                    backgroundSize: window.innerWidth <= 768 ?'30%':'10%',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center center',
                     backgroundAttachment: 'fixed'  // 添加这行使图片相对于视口固定
