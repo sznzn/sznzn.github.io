@@ -101,7 +101,7 @@ const Projects = () => {
                 <div className="candy-card">
                     <div className="card-content">
                         <h3>{content[currentLang].project1.title}</h3>
-                        <img src="./src/assets/images/css-positioning-tutorial.png" alt="CSS Positioning Tutorial" className="project-image" />
+                        <img src="/assets/images/css-positioning-tutorial.png" alt="CSS Positioning Tutorial" className="project-image" />
                         <p className="project-description">{content[currentLang].project1.description}</p>
                         <div className="tech-stack">
                             {content[currentLang].project1.tech.map((tech, index) => (
