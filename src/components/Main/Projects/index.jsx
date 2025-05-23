@@ -162,7 +162,9 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-            <p className="coming-soon">{content[currentLang].comingSoon}</p>
+            <div className="coming-soon-container">
+                <p className="coming-soon">{content[currentLang].comingSoon}</p>
+            </div>
         </section>
     );
 };
