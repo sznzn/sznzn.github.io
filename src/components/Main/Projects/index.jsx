@@ -121,7 +121,7 @@ const Projects = () => {
                 <div className="candy-card">
                     <div className="card-content">
                         <h3>{content[currentLang].project2.title}</h3>
-                        <img src="https://picsum.photos/200/150?random=2" alt="project screenshot" className="project-image" />
+                        <img src="images/JS.png" alt="project screenshot" className="project-image" />
                         <p className="project-description">{content[currentLang].project2.description}</p>
                         <div className="tech-stack">
                             {content[currentLang].project2.tech.map((tech, index) => (
@@ -129,11 +129,11 @@ const Projects = () => {
                             ))}
                         </div>
                         <div className="card-links">
-                            <a className="btn-code disabled">
-                                <span>Not Available</span>
+                            <a href="https://github.com/sznzn/my-little-js-projects" target="_blank" className="btn-code">
+                                <span>GitHub</span>
                             </a>
-                            <a className="btn-demo disabled">
-                                <span>Coming Soon</span>
+                            <a href="https://sznzn.github.io/my-little-js-projects/ " target="_blank" className="btn-demo">
+                                <span>Demo</span>
                             </a>
                         </div>
                     </div>
